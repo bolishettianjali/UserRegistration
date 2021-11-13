@@ -10,6 +10,7 @@ public class UserRegistration {
         validateFirstname();
         validateLastName();
         validateEmail();
+        validateMobileNo();
     }
 
     private static void validateFirstname() {
@@ -44,6 +45,16 @@ public class UserRegistration {
             for(String email:emailIds){
                 System.out.println(email+": "+email.matches(regex));
             }
+    }
+    private static void validateMobileNo(){
+        ArrayList<String> mobileNo= new ArrayList<>();
+        mobileNo.add("9186843732");
+        mobileNo.add("9491328163");
+
+        String regex="[89][0-9]{9}";
+        for(String mobileNumber:mobileNo){
+            System.out.println(mobileNumber+": "+mobileNumber.matches(regex));
+        }
     }
 }
 
