@@ -5,20 +5,33 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println("Welcome to User Registration problem");
         validateFirstname();
+        validateLastName();
     }
 
     private static void validateFirstname() {
-        ArrayList<String> firstNames=new ArrayList<>();
+        ArrayList<String> firstNames = new ArrayList<>();
         firstNames.add("Anjali");
         firstNames.add("Teja");
-        String regex="[A-Z][a-z]{3,}";
-        for(String firstName:firstNames){
-            Pattern pattern= Pattern.compile(regex);
-            Matcher matcher=pattern.matcher(firstName);
-            System.out.println(firstName+":"+firstName.matches(regex));
+        String regex = "[A-Z][a-z]{3,}";
+        for (String firstName : firstNames) {
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(firstName);
+            System.out.println(firstName + ":" + firstName.matches(regex));
+        }
+    }
+
+    private static void validateLastName() {
+        ArrayList<String> lastNames = new ArrayList<>();
+        lastNames.add("Bolishetti");
+        lastNames.add("Polishetti");
+        String regex = "[A-Z][a-z]{3,}";
+        for (String lastName : lastNames) {
+            Pattern pattern = Pattern.compile(regex);
+            Matcher matcher = pattern.matcher(lastName);
+            System.out.println(lastName + ":" + lastName.matches(regex));
         }
     }
 }
