@@ -9,6 +9,7 @@ public class UserRegistration {
         System.out.println("Welcome to User Registration problem");
         validateFirstname();
         validateLastName();
+        validateEmail();
     }
 
     private static void validateFirstname() {
@@ -33,6 +34,16 @@ public class UserRegistration {
             Matcher matcher = pattern.matcher(lastName);
             System.out.println(lastName + ":" + lastName.matches(regex));
         }
+    }
+
+    private static void validateEmail() {
+        ArrayList<String> emailIds = new ArrayList<>();
+        emailIds.add("user@domain.com");
+        emailIds.add("user@domain.co.in");
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+            for(String email:emailIds){
+                System.out.println(email+": "+email.matches(regex));
+            }
     }
 }
 
