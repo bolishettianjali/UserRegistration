@@ -11,6 +11,7 @@ public class UserRegistration {
         validateLastName();
         validateEmail();
         validateMobileNo();
+        validatePassword();
     }
 
     private static void validateFirstname() {
@@ -54,6 +55,16 @@ public class UserRegistration {
         String regex="[89][0-9]{9}";
         for(String mobileNumber:mobileNo){
             System.out.println(mobileNumber+": "+mobileNumber.matches(regex));
+        }
+    }
+    private static void validatePassword(){
+        ArrayList<String> passwords= new ArrayList<>();
+        passwords.add("anjalianjali");
+        passwords.add("Tejateja");
+
+        String regex="[A-Za-z]{8,}";
+        for(String password: passwords){
+            System.out.println(password+":"+password.matches(regex));
         }
     }
 }
