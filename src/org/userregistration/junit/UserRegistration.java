@@ -62,7 +62,7 @@ public class UserRegistration {
         passwords.add("anjalianjali");
         passwords.add("Tejateja");
 
-        String regex="[A-Za-z]{8,}";
+        String regex= "(?=.*[a-z])(?=.*[A-Z]).{8,}";
         for(String password: passwords){
             System.out.println(password+":"+password.matches(regex));
         }
