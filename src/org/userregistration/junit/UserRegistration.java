@@ -60,9 +60,9 @@ public class UserRegistration {
     private static void validatePassword(){
         ArrayList<String> passwords= new ArrayList<>();
         passwords.add("anjalianjali");
-        passwords.add("Tejateja1");
+        passwords.add("Tejateja1@");
 
-        String regex= "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}";
+        String regex= "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,}";
         for(String password: passwords){
             System.out.println(password+":"+password.matches(regex));
         }
